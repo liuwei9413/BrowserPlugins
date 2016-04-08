@@ -1,0 +1,17 @@
+{
+ "name": "Content Script Cross-Domain XMLHttpRequest Example",
+ "version": "2.0",
+ "description": "跨域请求测试",
+ "permissions": [
+   "tabs", "http://*/*", "https://*/*"
+ ],
+  "background": { "scripts": ["jquery-2.0.0.min.js", "background.js"] },
+  "content_scripts": [{
+      "matches":["http://*/*"],
+      "js":["jquery-2.0.0.min.js", "contentscript.js"]
+    }],
+  "browser_action": {
+    "default_title": "跨域请求测试"
+  },
+  "manifest_version": 2
+}
